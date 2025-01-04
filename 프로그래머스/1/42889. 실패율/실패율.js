@@ -7,7 +7,7 @@ function solution(N, stages) {
         if(player === 0) {
             fail.push(0)
         }else {
-            fail.push([stages.filter(stage => stage === i).length / stages.filter(stage => stage >= i).length])
+            fail.push(stages.filter(stage => stage === i).length / stages.filter(stage => stage >= i).length)
         }
         
     }
