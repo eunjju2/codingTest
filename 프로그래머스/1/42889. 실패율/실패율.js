@@ -1,5 +1,4 @@
 function solution(N, stages) {
-    const answer = [];
     const fail = [];
     
     
@@ -8,19 +7,13 @@ function solution(N, stages) {
         if(player === 0) {
             fail.push(0)
         }else {
-            fail.push(stages.filter(stage => stage === i).length / stages.filter(stage => stage >= i).length)
+            fail.push([stages.filter(stage => stage === i).length / stages.filter(stage => stage >= i).length])
         }
         
     }
     
-    const failSort = [...fail].sort((a,b) => b-a)
-    
-    for (let [i, num] of failSort.entries()) {
-        const index = fail.findIndex(n => n === num)
-        fail[index] = -1;
-        answer.push(index + 1)
-    }
+    const result = Object.entries(fail).sort((a,b) => b[1]-a[1])
     
     
-    return answer;
+    return result.map(res => Number(res[0])+1);
 }
