@@ -36,8 +36,6 @@ function solution(dirs) {
         road.push(posArr[i-1]+[posArr[i]])
         road.push(posArr[i]+[posArr[i-1]])
     }
-    console.log(posArr)
-    console.log(road)
-    console.log([...new Set(road)])
+
     return [...new Set(road)].length / 2 ;
 }
