@@ -1,6 +1,6 @@
 function solution(genres, plays) {
     let answer = [];
-    let n = genres.length;
+    const n = genres.length;
     let obj = {};
     let cnt = {};
     
@@ -17,9 +17,8 @@ function solution(genres, plays) {
     for (const key in obj) {
         obj[key].sort((a,b) => b[1]-a[1])
     }
-    const sortArr = Object.entries(cnt).sort((a,b) => b[1]-a[1])
-    console.log(sortArr)
-    console.log(obj)
+    const sortArr = Object.entries(cnt).sort((a,b) => b[1] - a[1])
+
     for(const item of sortArr) {
         if(obj[item[0]].length > 1) {
             answer.push(obj[item[0]][0][0])
