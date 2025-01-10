@@ -3,23 +3,18 @@ function solution(id_list, report, k) {
     let obj = {};
     let cnt = {};
     
-    for(const id of id_list) {
-        cnt[id] = 0;
-    }
     
     for (const str of report) {
         const [user1, user2] = str.split(' ');
-        if(obj[user1]){
-            obj[user1].push(user2)
-        }else {
-            obj[user1] = [user2]
+        if(obj[user1] === undefined){
+            obj[user1] = new Set();
         }
+        obj[user1].add(user2);
     }
     
     for(const key in obj) {
-        obj[key] = [...new Set(obj[key])]
         for(item of obj[key]) {
-            cnt[item] += 1;
+            cnt[item] = (cnt[item] || 0) + 1;
         }
     }
     
