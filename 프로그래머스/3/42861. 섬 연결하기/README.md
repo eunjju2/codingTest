@@ -2,6 +2,9 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42861) 
 
+### 🌀재풀이
+> 유니온-파인드 알고리즘 직접 구현해보는 연습 많이 하기 !!
+
 ### 성능 요약
 
 메모리: 33.5 MB, 시간: 0.27 ms
