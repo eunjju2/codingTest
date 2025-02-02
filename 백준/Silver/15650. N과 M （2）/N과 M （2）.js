@@ -8,34 +8,18 @@ const [N, M] = fs
   .map(Number);
 
 let answer = [];
-let visited = Array(N + 1).fill(false);
 
-function backTrack(arr) {
+function backTrack(arr, idx) {
   if (arr.length === M) {
-    const str = arr.join("");
-    if (!answer.includes(str)) {
-      answer.push(str);
-    }
+    answer.push(arr.join(" "));
     return;
   }
 
-  for (let i = 1; i <= N; i++) {
-    if (!visited[i]) {
-      visited[i] = true;
-      backTrack([...arr, i].sort());
-      visited[i] = false;
-    }
+  for (let i = idx; i <= N; i++) {
+    backTrack([...arr, i], i + 1);
   }
 }
 
-backTrack([]);
+backTrack([], 1);
 
-let result = "";
-answer.forEach((num) => {
-  for (const n of num) {
-    result += n + " ";
-  }
-  result += "\n";
-});
-
-console.log(result.trim());
+console.log(answer.join("\n"));
