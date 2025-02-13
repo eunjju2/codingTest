@@ -6,7 +6,7 @@ function solution(board)
     let max = 0;
     
     if(row === 1 && col === 1) {
-        if(board[0][0] === 1) return 1;
+        return board[0][0] === 1 ? 1 : 0;
     }
     
     for(let i=1; i<row; i++) {
