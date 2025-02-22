@@ -2,6 +2,9 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42860) 
 
+### 재풀이
+> 당연히 첫번째부터 시작하겠지라고 생각해서 왜 그리디인가 했는데, 시작점이 정해지지 않았고 그걸 고려해서 풀었어야 했다 ,, 결국 힌트를 봐버림 <br> 블로그 참고 https://jhzlo.tistory.com/71
+
 ### 성능 요약
 
 메모리: 33.4 MB, 시간: 0.17 ms
