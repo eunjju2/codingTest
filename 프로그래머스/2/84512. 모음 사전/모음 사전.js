@@ -1,8 +1,5 @@
 function solution(word) {
-    let answer = 0;
-    
     const alphabet = ['A', 'E', 'I', 'O', 'U'];
-    
     const dic = [];
     
     function DFS(str, len) {
