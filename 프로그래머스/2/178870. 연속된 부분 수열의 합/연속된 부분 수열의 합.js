@@ -20,6 +20,10 @@ function solution(sequence, k) {
         }
     }
     
+    result.sort((a,b) => {
+        const diff = (a[1]-a[0]) - (b[1]-b[0]);
+        return diff !== 0 ? diff : a[0] - b[0];
+    })
 
-    return result.sort((a,b) => (a[1]-a[0]) - (b[1]-b[0]))[0];
+    return result[0];
 }
