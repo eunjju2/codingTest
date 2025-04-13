@@ -5,7 +5,6 @@ const [str, ...input] = fs.readFileSync(filePath).toString().trim().split("\n");
 const [M, N] = str.split(" ").map(Number);
 const arr = input.map((s) => s.split(" ").map(Number));
 
-let answer = 0;
 const dp = Array.from({ length: M }, () => Array(N).fill(-1));
 const dx = [-1, 1, 0, 0];
 const dy = [0, 0, -1, 1];
